@@ -1,9 +1,7 @@
 # Admir Trakic Home Page
 
-I wanted a clean, simple home page where I could put my writing, speaking, 
-projects, and photos. It had to be fast, mobile-friendly, free to build, and 
+Simple home page where I could put my writing, projects, and photos. It had to be fast, mobile-friendly, free to build, and 
 easy to update. This is the result. Forks and pull requests are welcome!
-
 
 
 # Quick start
@@ -20,9 +18,7 @@ documentation for more info.
 # Docker quick start
 
 As an alternative to installing Ruby and Jekyll, if you're a user of
-[Docker](https://www.docker.com/) and [Docker 
-Compose](https://docs.docker.com/compose/), you can run a Docker image of 
-yevgeniy-brikman-homepage that has all the dependencies already setup for you.
+[Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/), which builds all dependencies setup for you.
 
 On Linux:
 
