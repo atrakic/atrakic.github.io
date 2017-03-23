@@ -1,7 +1,7 @@
 # Site settings
 name: atrakic_github_io
 title: atrakic.github.io
-email: xomodo at gmail dot com
+email: xomodoat@gmaildot.com
 description: > 
   my random echo stuff.  
 baseurl: ""
@@ -34,6 +34,7 @@ exclude:
   - README.md
   - CNAME
   - LICENSE.md
+  - [vendor]
 
 gems:
 #  - jekyll-assets
