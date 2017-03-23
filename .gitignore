@@ -5,3 +5,4 @@
 /_assets/bower/*
 /_site/*
 /_vendor/*
+.jekyll-metadata

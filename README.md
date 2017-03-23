@@ -1,5 +1,7 @@
 # Admir Trakic Home Page
 
+[![CircleCI](https://circleci.com/gh/atrakic/atrakic.github.io/tree/master.svg?style=svg)](https://circleci.com/gh/atrakic/atrakic.github.io/tree/master) 
+
 Simple home page where I could put my writing, projects, etc. 
 This is the result. Forks and pull requests are welcome!
 
