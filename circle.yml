@@ -1,17 +1,12 @@
 machine:
-  environment:
-    NOKOGIRI_USE_SYSTEM_LIBRARIES: true # speeds up installation of html-proofer
+  ruby:
+    version: 2.4.0
 
 dependencies:
-  post:
-    - bundle exec jekyll build
+  pre:
+    - ./bin/setup
 
 test:
   post:
-    - bundle exec htmlproofer ./_site --allow-hash-href --check-favicon --check-html --disable-external
-
-#deployment:
-#  #prod:
-#    branch: master
-#    commands:
-#      - rsync -va --delete ./_site username@my-website:/var/html
+    - bundle exec jekyll build
+    - bundle exec htmlproofer ./_site --only-4xx --allow-hash-href --assume-extension --check-opengraph
