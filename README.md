@@ -1,7 +1,7 @@
 # Admir Trakic Home Page
 
-Simple home page where I could put my writing, projects, and photos. It had to be fast, mobile-friendly, free to build, and 
-easy to update. This is the result. Forks and pull requests are welcome!
+Simple home page where I could put my writing, projects, etc. 
+This is the result. Forks and pull requests are welcome!
 
 
 # Quick start
@@ -25,6 +25,13 @@ On Linux:
 1. `git clone` this repo
 2. `docker-compose up`
 3. Go to `http://localhost:4000` to test
+
+# Technologies
+
+1. Built with [Jekyll](http://jekyllrb.com/). This website is completely static and I use basic HTML or Markdown for everything.
+1. Hosted on [GitHub Pages](https://pages.github.com/). 
+   I'm using the [GitHub Pages Gem](https://help.github.com/articles/using-jekyll-with-pages/)
+   and only Jekyll plugins that are [available on GitHub Pages](https://help.github.com/articles/repository-metadata-on-github-pages/).
 
 # License
 

@@ -1,28 +1,33 @@
-# Welcome to Jekyll!
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
+name: atrakic_github_io
 title: atrakic.github.io
-email: xomodo@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
+email: xomodoat@gmaildot.com
+description: > 
   my random echo stuff.  
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: ""
+url: "" 
 twitter_username: admirtrakic
 github_username:  atrakic
+permalink: pretty
+
+exclude:
+  - .bowerrc
+  - .travis.yml
+  - bin/*
+  - bower.json
+  - circle.yml
+  - README.md
+  - CNAME
+  - LICENSE.md
+  - vendor
+  - deploy
+
+gems:
+#  - jekyll-assets
+#  - jekyll-sitemap
+  -  html-proofer
 
 # Build settings
 markdown: kramdown
 theme: minima
-gems:
-  - jekyll-feed
-exclude:
-  - Gemfile
-  - Gemfile.lock
+
