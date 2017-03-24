@@ -1,0 +1,143 @@
+html, body, div, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'pt sans', arial, helvetica, sans-serif !important;
+    font-size: .94em;
+    text-align: justify;
+    line-height: 1.5em;
+    background-color: #FFFFFF;
+    color: #444444;
+}
+
+#container{
+    width: 800px;
+    min-height: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+#container a,h4{
+    color: #C83E22;
+    text-decoration: none;
+}
+
+#container a:hover{
+    color: #AE361E;
+    text-decoration: none;
+}
+
+#container ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+#container li{
+    border-bottom : 1px solid #eee;
+    padding: 5px 0 5px 0;
+}
+
+#container li:last-child{
+    border-bottom : none;
+    padding: 5px 0 5px 0;
+}
+
+.tag {
+    display: inline;
+    color: #999;
+    border: none !important;
+}
+
+ul.slats li h3 {
+    margin-bottom : 0;
+}
+
+ul.slats li p {
+    margin: 0;
+}
+
+ul.slats li p span.meta {
+    display: block;
+    color: #999;
+}		
+
+footer {
+    color: gray;
+}
+
+#main-footer {
+    padding: 15px;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-top : 1px solid #eee;
+    text-align: center;
+}
+
+#main-footer div {
+    width: 800px;
+    margin: 0 auto;
+}
+/*Gist costumisation*/
+.line_numbers, .gist-meta {
+    display: none !important;
+}
+
+.gist-data {
+    border-bottom: none !important;
+}
+
+.gist-file, .gist-data {
+    border-radius: 3px !important;
+}
+
+/*Nav*/
+nav.breadcrumb {
+    color: #ccc;
+    padding: 15px 0px 10px 0px;
+    border-bottom: 1px solid #eee;
+}
+nav.breadcrumb div {
+    width: 800px;
+    margin:0 auto;
+}
+nav.breadcrumb a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #999;
+}
+nav.breadcrumb a:first-child {
+    margin-left: 0;
+    }
+nav.breadcrumb a:hover,
+nav.breadcrumb a:focus {
+    color: #333;
+}
+nav.breadcrumb a:active {
+    color: #666;
+}
+nav.breadcrumb strong {
+    margin-left: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+/*Colors*/
+
+.green {
+    color: #8CAC29; 
+}
+
+.red {
+    color: #C00;
+}
