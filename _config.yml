@@ -1,33 +1,61 @@
-# Site settings
-name: atrakic_github_io
-title: atrakic.github.io
-email: xomodoat@gmaildot.com
-description: > 
-  my random echo stuff.  
-baseurl: ""
-url: "" 
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:        pretty
+# relative_permalinks: true
+
+assets:
+  compress:
+      css: true
+      js: true
+  features:
+    automatic_img_size: false
+  sources:
+    - _assets/bower
+    - _assets/fonts
+    - _assets/images
+    - _assets/javascripts
+    - _assets/stylesheets
+
+ga_analytics: # Add Google Analytics tracking code
+
+# Setup
+name:   atrakic_github_io
+title:  atrakic.github.io
+description: >
+  my random echo stuff.
+baseurl:    ""
+url:        ""
+paginate:   5
+
+# About
 twitter_username: admirtrakic
 github_username:  atrakic
-permalink: pretty
 
+# Excude stuff
 exclude:
   - .bowerrc
   - .travis.yml
   - bin/*
   - bower.json
   - circle.yml
+  - Gemfile
+  - Gemfile.lock
   - README.md
-  - CNAME
-  - LICENSE.md
-  - vendor
-  - deploy
+  - LICENSE.txt
+  - jekyll-serve.sh
+  - docker-compose.yml
+  - Dockerfile
 
 gems:
-#  - jekyll-assets
-#  - jekyll-sitemap
-  -  html-proofer
+  - jekyll-assets
+  - jekyll-sitemap
+  - html-proofer
+  - jekyll-paginate
 
 # Build settings
 markdown: kramdown
-theme: minima
+# theme: minima
 
+# Custom vars
+version:             0.1.0
