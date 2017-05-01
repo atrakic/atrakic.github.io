@@ -42,6 +42,10 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - LICENSE.txt
+  - jekyll-serve.sh
+  - docker-compose.yml
+  - Dockerfile
 
 gems:
   - jekyll-assets
