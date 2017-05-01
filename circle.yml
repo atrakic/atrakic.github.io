@@ -1,8 +1,8 @@
 general:
-  branches:
-    ignore:
-    - gh-pages # list of branches to ignore
-    - /release\/.*/ # or ignore regexes
+#  branches:
+#    only:
+#    - master # list of branches to build
+#    - /feature-.*/ # or regexes
 
 machine:
   ruby:

@@ -6,3 +6,14 @@
 /_site/*
 /_vendor/*
 .jekyll-metadata
+/.bundle/
+/.yardoc
+/Gemfile.lock
+/_site/
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+*.gem
