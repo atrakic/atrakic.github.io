@@ -2,8 +2,8 @@
 
 [![CircleCI](https://circleci.com/gh/atrakic/atrakic.github.io/tree/master.svg?style=svg)](https://circleci.com/gh/atrakic/atrakic.github.io/tree/master)
 
-Simple home page where I could put my writing, projects, etc.
-This is the result. Forks and pull requests are welcome!
+Simple home page where I could put my writing, CI/CD plays, etc.
+This is the result. 
 
 # Quick start
 
@@ -25,7 +25,7 @@ On Linux:
 
 1. `git clone` this repo
 2. `docker-compose up --build`
-3. Go to `http://localhost:4000` to test
+3. Go to `http://localhost:4000`to test
 
 # Technologies
 
