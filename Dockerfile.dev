@@ -28,4 +28,4 @@ ENV BUNDLE_GEMFILE /src/Gemfile
 EXPOSE 4000
 
 ENTRYPOINT ["bundle", "exec"]
-CMD ["jekyll","serve","--drafts","--incremental","--host=0.0.0.0"]
+CMD ["jekyll","serve","--drafts","--watch","--incremental","--host=0.0.0.0"]

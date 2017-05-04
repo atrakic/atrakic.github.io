@@ -1,11 +1,2 @@
-source "https://rubygems.org"
-
-gem "autoprefixer-rails"
-gem "html-proofer"
-gem "jekyll"
-gem "jekyll-assets"
-gem "jekyll-sitemap"
-gem "jekyll-paginate" 
-gem "mini_magick"
-gem "sass"
-gem "uglifier"
+source 'https://rubygems.org'
+gem 'github-pages', '127', group: :jekyll_plugins

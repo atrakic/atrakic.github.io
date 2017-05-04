@@ -1,32 +1,33 @@
-# Permalinks
-#
-# Use of `relative_permalinks` ensures post links from the index work properly.
-permalink:        pretty
-# relative_permalinks: true
-
-assets:
-  compress:
-      css: true
-      js: true
-  features:
-    automatic_img_size: false
-  sources:
-    - _assets/bower
-    - _assets/fonts
-    - _assets/images
-    - _assets/javascripts
-    - _assets/stylesheets
-
-ga_analytics: # Add Google Analytics tracking code
 
 # Setup
-name:   atrakic_github_io
-title:  atrakic.github.io
+name:   atrakic.github.io
 description: >
-  my random echo stuff.
-baseurl:    ""
-url:        ""
-paginate:   5
+  my random echo stuff
+meta_description: "yet another jekyll site"
+baseurl:    '/'
+paginate:   3
+
+# RSS
+url:        "/"
+author:     "Admir Trakic" 
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+logo: false
+
+# Permalinks
+# Use of `relative_permalinks` ensures post links from the index work properly.
+# permalink:        pretty
+timezone:         Europe/Copenhagen
+# relative_permalinks: true
+
+gems: 
+  - jekyll-paginate
+#  - jekyll-gist
+#  - jekyll-assets
+#  - jekyll-sitemap
+###  - html-proofer
 
 # About
 twitter_username: admirtrakic
@@ -42,20 +43,12 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
-  - LICENSE.txt
-  - jekyll-serve.sh
+  - Makefile
   - docker-compose.yml
   - Dockerfile
 
-gems:
-  - jekyll-assets
-  - jekyll-sitemap
-  - html-proofer
-  - jekyll-paginate
-
-# Build settings
-markdown: kramdown
-# theme: minima
 
 # Custom vars
-version:             0.1.0
+version:             0.1.1
+
+
