@@ -8,6 +8,7 @@ set -e
 
 # Set up Ruby dependencies via Bundler.
 gem install bundler --conservative
+bundle config --global silence_root_warning 1
 bundle check || bundle install
 bundle update
 

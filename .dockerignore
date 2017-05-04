@@ -4,9 +4,14 @@
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
 node_modules
 
+Dockerfile
+docker-compose
+
 # Jekyll
-_site/
+#_site/
 .sass-cache/
+.asset-cache/
+.jekyll-metadata
 
 # Vagrant
 .vagrant

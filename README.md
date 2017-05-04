@@ -1,10 +1,9 @@
 # Admir Trakic Home Page
 
-[![CircleCI](https://circleci.com/gh/atrakic/atrakic.github.io/tree/master.svg?style=svg)](https://circleci.com/gh/atrakic/atrakic.github.io/tree/master) 
+[![CircleCI](https://circleci.com/gh/atrakic/atrakic.github.io/tree/master.svg?style=svg)](https://circleci.com/gh/atrakic/atrakic.github.io/tree/master)
 
-Simple home page where I could put my writing, projects, etc. 
+Simple home page where I could put my writing, projects, etc.
 This is the result. Forks and pull requests are welcome!
-
 
 # Quick start
 
@@ -25,13 +24,13 @@ As an alternative to installing Ruby and Jekyll, if you're a user of
 On Linux:
 
 1. `git clone` this repo
-2. `docker-compose up`
+2. `docker-compose up --build`
 3. Go to `http://localhost:4000` to test
 
 # Technologies
 
 1. Built with [Jekyll](http://jekyllrb.com/). This website is completely static and I use basic HTML or Markdown for everything.
-1. Hosted on [GitHub Pages](https://pages.github.com/). 
+1. Hosted on [GitHub Pages](https://pages.github.com/).
    I'm using the [GitHub Pages Gem](https://help.github.com/articles/using-jekyll-with-pages/)
    and only Jekyll plugins that are [available on GitHub Pages](https://help.github.com/articles/repository-metadata-on-github-pages/).
 
