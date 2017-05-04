@@ -17,10 +17,8 @@ highlighter: rouge
 logo: false
 
 # Permalinks
-# Use of `relative_permalinks` ensures post links from the index work properly.
 # permalink:        pretty
 timezone: Europe/Copenhagen
-relative_permalinks: true
 
 gems: 
   - jekyll-paginate
