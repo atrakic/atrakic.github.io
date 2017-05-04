@@ -24,6 +24,7 @@ RUN bundle config build.nokogiri --use-system-libraries && \
 VOLUME /src
 
 ENV BUNDLE_GEMFILE /src/Gemfile
+#ENV TIMEZONE  Europe/Copenhagen
 
 EXPOSE 4000
 
