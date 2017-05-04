@@ -4,7 +4,7 @@ name:   atrakic.github.io
 description: >
   my random echo stuff
 meta_description: "yet another jekyll site"
-baseurl:    '/'
+#baseurl:    ""
 paginate:   3
 
 # RSS
@@ -19,7 +19,7 @@ logo: false
 # Permalinks
 # Use of `relative_permalinks` ensures post links from the index work properly.
 # permalink:        pretty
-timezone:         Europe/Copenhagen
+timezone: Europe/Copenhagen
 # relative_permalinks: true
 
 gems: 
@@ -46,7 +46,6 @@ exclude:
   - Makefile
   - docker-compose.yml
   - Dockerfile
-
 
 # Custom vars
 version:             0.1.1
