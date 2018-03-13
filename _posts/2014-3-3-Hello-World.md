@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Hello world!
+category: Meta
 ---
 
 Vestibulum imperdiet adipiscing arcu, quis aliquam dolor condimentum dapibus. 
