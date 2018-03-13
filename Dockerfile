@@ -1,29 +1,26 @@
-# FROM jekyll/jekyll:stable
-FROM gliderlabs/alpine:3.2
+FROM ruby:2.4-alpine
 
-RUN apk-install bash build-base git libffi-dev zlib-dev libxml2-dev libxslt-dev ruby ruby-dev nodejs
+RUN apk add --no-cache build-base gcc bash
 
-# Install Jekyll
-RUN gem install bundler jekyll --no-ri --no-rdoc
+RUN gem install jekyll
 
 # Install nokogiri separately because it's special
 RUN gem install nokogiri -v 1.6.7.2 -- --use-system-libraries
 
 WORKDIR /src
-ADD Gemfile /src/Gemfile
-ADD Gemfile.lock /src/Gemfile.lock
+#ADD Gemfile /src/Gemfile
+#ADD Gemfile.lock /src/Gemfile.lock
 
-RUN bundle config --global silence_root_warning 1
-RUN bundle config build.nokogiri --use-system-libraries && \
-    bundle check || bundle install && \
-    bundle update
+#RUN bundle config --global silence_root_warning 1
+#RUN bundle config build.nokogiri --use-system-libraries && \
+#    bundle check || bundle install && \
+#    bundle update
 
 VOLUME /src
 
+ENV JEKYLL_NEW false
 ENV BUNDLE_GEMFILE /src/Gemfile
-ENV TIMEZONE  Europe/Copenhagen
 
 EXPOSE 4000
-
 ENTRYPOINT ["bundle", "exec"]
-CMD ["jekyll","serve","--drafts","--incremental","--host=0.0.0.0"]
+CMD [ "jekyll", "serve", "--force_polling", "-H", "0.0.0.0", "-P", "4000" ]
