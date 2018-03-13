@@ -12,26 +12,17 @@ machine:
   environment:
     NOKOGIRI_USE_SYSTEM_LIBRARIES: true # speeds up installation of html-proofer
     USER_NAME: atrakic
-#    USER_EMAIL: <your-github-email>
 
 dependencies:
   pre:
-    - pip install awscli
+    - docker info
+    - bundle exec jekyll build
     - ./bin/setup
 #  override:
     - docker build --rm=false -t xomodo/atrakic.github.io:$CIRCLE_SHA1 .
 
 test:
   post:
-#    - bundle exec jekyll build --incremental
-#    - bundle exec htmlproofer ./_site --only-4xx --allow-hash-href #--assume-extension --check-opengraph
+    - bundle exec htmlproofer ./_site --allow-hash-href --check-favicon --check-html --disable-external
     - docker run -d -p 4000:4000 xomodo/atrakic.github.io:$CIRCLE_SHA1; sleep 10
     - curl --retry 10 --retry-delay 5 -v http://localhost:4000
-
-# CD 
-#deployment:
-#  elasticbeanstalk:
-#    branch: master
-#    commands:
-#      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
-#      - ./bin/deploy-eb.sh $$CIRCLE_SHA1
