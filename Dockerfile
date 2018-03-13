@@ -1,9 +1,6 @@
 # FROM jekyll/jekyll:stable
 FROM gliderlabs/alpine:3.2
 
-MAINTAINER Admir Trakic "<xomodo@gmail.com>"
-
-# Install all the dependencies for Jekyll
 RUN apk-install bash build-base git libffi-dev zlib-dev libxml2-dev libxslt-dev ruby ruby-dev nodejs
 
 # Install Jekyll
@@ -24,7 +21,7 @@ RUN bundle config build.nokogiri --use-system-libraries && \
 VOLUME /src
 
 ENV BUNDLE_GEMFILE /src/Gemfile
-#ENV TIMEZONE  Europe/Copenhagen
+ENV TIMEZONE  Europe/Copenhagen
 
 EXPOSE 4000
 

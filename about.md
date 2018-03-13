@@ -1,10 +1,15 @@
 ---
 layout: page
-title:  about
+title: About
+permalink: /about/
 ---
 
-Yet another site based on Jekyll [jekyllrb.com](https://jekyllrb.com/) by a software engineer working with cloud infrastructure, software development, test automation, devops automation using docker, continuous delivery/integration and open source. 
+Some information about you!
 
-My current interests are: docker, monitoring, ansible, python, go, AWS, serveless, lambda, jenkins ...
+### More Information
 
-[![twitter](/assets/images/twitter.png)](https://twitter.com/{{ site.twitter_username }})[![github](/assets/images/github.png)](https://github.com/{{ site.github_username }})
+A place to include any other types of information that you'd like to include about yourself.
+
+### Contact me
+
+[_xomodo_@_gmail_._com_](mailto:_xomodo_@_gmail_._com_)
