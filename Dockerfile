@@ -2,10 +2,11 @@ FROM ruby:2.4-alpine
 
 RUN apk add --no-cache build-base gcc bash
 
+RUN gem install bundler
 RUN gem install jekyll
 
 # Install nokogiri separately because it's special
-RUN gem install nokogiri -v 1.6.7.2 -- --use-system-libraries
+# RUN gem install nokogiri -v 1.6.7.2 -- --use-system-libraries
 
 WORKDIR /src
 #ADD Gemfile /src/Gemfile
