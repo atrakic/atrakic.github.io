@@ -17,6 +17,5 @@ categories:
 ' > $post
 fi
 
-#[ ${EDITOR#[mg]} = "vim" ] && args='+'
-
-exec $EDITOR "$post" $args
+[[ -z $EDITOR ]] && EDITOR=vim
+exec "${EDITOR}" "$post" "$args"

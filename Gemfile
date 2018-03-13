@@ -1,9 +1,7 @@
 source "https://rubygems.org"
 
-gem "docker-template"
-group :development do
-  unless ENV["CI"] == "true"
-    gem "travis"
-    gem "pry"
-  end
-end
+ruby '2.4.0'
+
+gem 'jekyll'
+gem 'html-proofer'
+# gem "docker-template"

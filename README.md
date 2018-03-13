@@ -6,11 +6,10 @@
 Simple home page where I could put my writing, CI/CD playground, etc.
 This is the result.
 
-
 # Localhost quick start
 
 1. Git clone this repo.
-1. Make sure you have [Jekyll](http://jekyllrb.com/docs/installation/) installed.
+1. Make sure you have [Jekyll](https://jekyllrb.com/docs/installation/) installed.
 1. Just the first time: `bundle install`.
 1. To build the site and serve it: `bundle exec jekyll serve`.
 1. To test: `http://localhost:4000`.

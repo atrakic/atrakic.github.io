@@ -5,17 +5,9 @@ RUN apk add --no-cache build-base gcc bash
 RUN gem install bundler
 RUN gem install jekyll
 
-# Install nokogiri separately because it's special
-# RUN gem install nokogiri -v 1.6.7.2 -- --use-system-libraries
-
 WORKDIR /src
 #ADD Gemfile /src/Gemfile
 #ADD Gemfile.lock /src/Gemfile.lock
-
-#RUN bundle config --global silence_root_warning 1
-#RUN bundle config build.nokogiri --use-system-libraries && \
-#    bundle check || bundle install && \
-#    bundle update
 
 VOLUME /src
 

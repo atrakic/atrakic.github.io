@@ -1,8 +1,0 @@
-app: 
-  build: .
-  volumes:
-    - .:/src
-  ports:
-    - "4000:4000"
-  environment:
-    - TIMEZONE="Europe/Copenhagen"
