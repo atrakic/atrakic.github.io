@@ -1,18 +1,71 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>ozf</title>
+  <link rel="stylesheet" href="./style.css">
+<style>
+  body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+.word-cloud {
+  text-align: center;
+  line-height: 2;
+  transform: rotate(-5deg);
+}
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+.word-cloud span {
+  display: inline-block;
+  margin: 5px;
+  color: #333;
+  transition: transform 0.3s ease;
+}
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
+.word-cloud span:hover {
+  transform: scale(1.1);
+}
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
+.cicd, .security, .kubernetes { font-size: 14px; }
+.http, .docker, .git { font-size: 16px; }
+.javascript, .dotnet, .nodejs, .aws, .azure, .sql, .nosql, .python, .linux { font-size: 18px; }
+.data, .devops, .cloud { font-size: 20px; }
+
+.data { transform: rotate(-10deg); }
+.http { transform: rotate(-8deg); }
+.cicd { transform: rotate(10deg); }
+.security { transform: rotate(-4deg); }
+</style>
+</head>
+<body>
+
+<!-- partial:index.partial.html -->
+<div class="word-cloud">
+  <span class="data">Data</span>
+  <span class="http">HTTP</span>
+  <span class="devops">DevOps</span>
+  <span class="cicd">CI/CD</span>
+  <span class="security">Security</span>
+  <span class="cloud">Cloud computing</span>
+  <span class="docker">Docker</span>
+  <span class="kubernetes">Kubernetes</span>
+  <span class="git">Git</span>
+  <span class="javascript">JavaScript</span>
+  <span class="nodejs">Node.js</span>
+  <span class="aws">AWS</span>
+  <span class="azure">Azure</span>
+  <span class="sql">SQL</span>
+  <span class="dotnet">Dotnet</span>
+  <span class="python">Python</span>
+  <span class="golang">Golang</span>
+  <span class="linux">Linux</span>
 </div>
+<!-- partial -->
+ 
+</body>
+</html>
