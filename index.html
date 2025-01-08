@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>atrakic</title>
@@ -10,7 +10,8 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f0f0;
+  background-color: #0c0101;
+  color: #ffffff;
   font-family: Arial, sans-serif;
 }
 
@@ -23,7 +24,7 @@
 .word-cloud span {
   display: inline-block;
   margin: 5px;
-  color: #333;
+  color: #ffffff;
   transition: transform 0.3s ease;
 }
 
@@ -33,13 +34,14 @@
 
 .cicd, .security, .kubernetes { font-size: 14px; }
 .http, .docker, .git { font-size: 16px; }
-.javascript, .dotnet, .nodejs, .aws, .azure, .sql, .nosql, .python, .linux { font-size: 18px; }
-.data, .devops, .cloud { font-size: 20px; }
+.javascript, .dotnet, .nodejs, .aws, .azure, .sql, .nosql, .python, { font-size: 18px; }
+.data, .devops, .cloud, .linux { font-size: 20px; }
 
 .data { transform: rotate(-10deg); }
 .http { transform: rotate(-8deg); }
 .cicd { transform: rotate(10deg); }
 .security { transform: rotate(-4deg); }
+.cloud, .dotnet { transform: rotate(6deg); }
 </style>
 </head>
 <body>
