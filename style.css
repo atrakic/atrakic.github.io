@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #0c0101;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.word-cloud {
+  text-align: center;
+  line-height: 2;
+  transform: rotate(-5deg);
+}
+
+.word-cloud span {
+  display: inline-block;
+  margin: 5px;
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.word-cloud span:hover {
+  transform: scale(1.1);
+}
