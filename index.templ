@@ -1,0 +1,45 @@
+package main
+
+templ index(name string) {
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8"/>
+			<title>{ name }</title>
+			<link rel="stylesheet" href="./style.css"/>
+			<style>
+				.cicd, .security, .kubernetes { font-size: 14px; }
+				.http, .docker, .git { font-size: 16px; }
+				.javascript, .dotnet, .nodejs, .aws, .azure, .sql, .nosql, .python, { font-size: 18px; }
+				.data, .devops, .cloud, .linux { font-size: 20px; }
+				.data { transform: rotate(-10deg); }
+				.http { transform: rotate(-8deg); }
+				.cicd { transform: rotate(10deg); }
+				.security { transform: rotate(-4deg); }
+				.cloud, .dotnet { transform: rotate(6deg); }
+			</style>
+		</head>
+		<body>
+			<div class="word-cloud">
+				<span class="data">Data</span>
+				<span class="http">HTTP</span>
+				<span class="devops">DevOps</span>
+				<span class="cicd">CI/CD</span>
+				<span class="security">Security</span>
+				<span class="cloud">Cloud computing</span>
+				<span class="docker">Docker</span>
+				<span class="kubernetes">Kubernetes</span>
+				<span class="git">Git</span>
+				<span class="javascript">JavaScript</span>
+				<span class="nodejs">Node.js</span>
+				<span class="aws">AWS</span>
+				<span class="azure">Azure</span>
+				<span class="sql">SQL</span>
+				<span class="dotnet">Dotnet</span>
+				<span class="python">Python</span>
+				<span class="golang">Golang</span>
+				<span class="linux">Linux</span>
+			</div>
+		</body>
+	</html>
+}
