@@ -26,18 +26,19 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Go
         uses: actions/setup-go@v2
         with:
           go-version: '1.23.4'
+
       - name: Build static pages
         run: |
           go get github.com/a-h/templ
-          # templ generate
-          go run .
+          go run . {{ github.actor }}
 
       # Ugly hack to remove files that are not needed
-      - name: Cleanup 
+      - name: Cleanup
         run: rm -rf .git .github .gitignore .vscode go.mod go.sum LICENSE README.md index.templ index_templ.go
 
       - name: Upload artifact
