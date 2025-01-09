@@ -30,7 +30,7 @@ jobs:
         uses: actions/setup-go@v2
         with:
           go-version: '1.23.4'
-      - name: Build
+      - name: Build static pages
         run: |
           go get github.com/a-h/templ
           # templ generate
@@ -38,7 +38,7 @@ jobs:
       - name: Archive
         uses: actions/upload-artifact@v3
         with:
-          name: myapp
+          name: pages
           path: './index.html'
 
   # Deployment job
@@ -52,3 +52,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: pages
