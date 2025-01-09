@@ -35,11 +35,10 @@ jobs:
           go get github.com/a-h/templ
           # templ generate
           go run .
-      - name: Archive
-        uses: actions/upload-artifact@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: pages
-          path: './index.html'
+          path: .
 
   # Deployment job
   deploy:
@@ -52,5 +51,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          artifact_name: pages
