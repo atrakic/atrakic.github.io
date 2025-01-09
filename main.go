@@ -6,6 +6,27 @@ import (
 	"os"
 )
 
+var skills = []string{
+	"Data",
+	"HTTP",
+	"DevOps",
+	"CI/CD",
+	"Security",
+	"Cloud computing",
+	"Docker",
+	"Kubernetes",
+	"Git",
+	"JavaScript",
+	"Node.js",
+	"AWS",
+	"Azure",
+	"SQL",
+	"Dotnet",
+	"Python",
+	"Golang",
+	"Linux",
+}
+
 func main() {
 	if len(os.Args) < 2 {
 		log.Fatalf("usage: %s <name>", os.Args[0])

@@ -1,45 +1,43 @@
 package main
 
+import (
+	"fmt"
+	"strings"
+)
+
+templ skillsComponent() {
+	<div class="word-cloud">
+		for _, skill := range skills {
+			<span class={ fmt.Sprintf("%s", strings.ToLower(skill)) }>{ skill }</span>
+		}
+	</div>
+}
+
+templ headerComponent(title string) {
+	<head>
+		<meta charset="UTF-8"/>
+		<title>{ title }</title>
+		<link rel="stylesheet" href="assets/css/style.css"/>
+		<style>
+			.cicd, .security, .kubernetes { font-size: 14px; }
+			.http, .docker, .git { font-size: 16px; }
+			.javascript, .dotnet, .nodejs, .aws, .azure, .sql, .nosql, .python, { font-size: 18px; }
+			.data, .devops, .cloud, .linux { font-size: 20px; }
+			.data { transform: rotate(20deg); }
+			.http { transform: rotate(-8deg); }
+			.cicd { transform: rotate(10deg); }
+			.security { transform: rotate(-4deg); }
+			.cloud, .dotnet, .azure { transform: rotate(6deg); }
+		</style>
+	</head>
+}
+
 templ index(name string) {
 	<!DOCTYPE html>
 	<html lang="en">
-		<head>
-			<meta charset="UTF-8"/>
-			<title>{ name }</title>
-			<link rel="stylesheet" href="./style.css"/>
-			<style>
-				.cicd, .security, .kubernetes { font-size: 14px; }
-				.http, .docker, .git { font-size: 16px; }
-				.javascript, .dotnet, .nodejs, .aws, .azure, .sql, .nosql, .python, { font-size: 18px; }
-				.data, .devops, .cloud, .linux { font-size: 20px; }
-				.data { transform: rotate(-10deg); }
-				.http { transform: rotate(-8deg); }
-				.cicd { transform: rotate(10deg); }
-				.security { transform: rotate(-4deg); }
-				.cloud, .dotnet { transform: rotate(6deg); }
-			</style>
-		</head>
+		@headerComponent(name)
 		<body>
-			<div class="word-cloud">
-				<span class="data">Data</span>
-				<span class="http">HTTP</span>
-				<span class="devops">DevOps</span>
-				<span class="cicd">CI/CD</span>
-				<span class="security">Security</span>
-				<span class="cloud">Cloud computing</span>
-				<span class="docker">Docker</span>
-				<span class="kubernetes">Kubernetes</span>
-				<span class="git">Git</span>
-				<span class="javascript">JavaScript</span>
-				<span class="nodejs">Node.js</span>
-				<span class="aws">AWS</span>
-				<span class="azure">Azure</span>
-				<span class="sql">SQL</span>
-				<span class="dotnet">Dotnet</span>
-				<span class="python">Python</span>
-				<span class="golang">Golang</span>
-				<span class="linux">Linux</span>
-			</div>
+			@skillsComponent()
 		</body>
 	</html>
 }
