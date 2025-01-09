@@ -35,12 +35,16 @@ jobs:
           go get github.com/a-h/templ
           # templ generate
           go run .
+
+      # Ugly hack to remove files that are not needed
+      - name: Cleanup 
+        run: rm -rf .git .github .gitignore .vscode go.mod go.sum LICENSE README.md index.templ index_templ.go
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
 
-  # Deployment job
   deploy:
     environment:
       name: github-pages
