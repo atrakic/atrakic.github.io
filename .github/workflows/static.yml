@@ -35,11 +35,11 @@ jobs:
       - name: Build static pages
         run: |
           go get github.com/a-h/templ
-          go run . {{ github.actor }}
+          go run . "{{ github.actor }}"
 
       # Ugly hack to remove files that are not needed
       - name: Cleanup
-        run: rm -rf .git .github .gitignore .vscode go.mod go.sum LICENSE README.md index.templ index_templ.go
+        run: rm -rf .git .github .gitignore .vscode go.mod go.sum LICENSE README.md *.templ *.go Makefile
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
