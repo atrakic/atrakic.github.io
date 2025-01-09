@@ -33,7 +33,8 @@ jobs:
       - name: Build
         run: |
           go get github.com/a-h/templ
-          templ generate
+          # templ generate
+          go run .
       - name: Archive
         uses: actions/upload-artifact@v3
         with:
