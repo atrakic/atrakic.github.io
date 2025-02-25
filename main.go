@@ -11,8 +11,6 @@ var skills = []string{
 	"HTTP",
 	"DevOps",
 	"CI/CD",
-	"Security",
-	"Cloud computing",
 	"Docker",
 	"Kubernetes",
 	"Git",
