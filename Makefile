@@ -1,4 +1,4 @@
-USER ?= atrakic
+USER ?= $(shell whoami)
 
 all:
 	templ generate
