@@ -13,7 +13,6 @@ var skills = []string{
 	"CI/CD",
 	"Docker",
 	"Kubernetes",
-	"Git",
 	"JavaScript",
 	"Node.js",
 	"AWS",
