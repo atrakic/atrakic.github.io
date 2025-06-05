@@ -26,18 +26,18 @@ var skills = []string{
 }
 
 func main() {
-	if len(os.Args) < 2 {
-		log.Fatalf("usage: %s <name>", os.Args[0])
+	name := "John Doe"
+	if len(os.Args) > 1 {
+		name = os.Args[1]
 	}
-	name := os.Args[1]
 
 	f, err := os.Create("index.html")
 	if err != nil {
 		log.Fatalf("failed to create output file: %v", err)
 	}
+	defer f.Close()
 
-	err = index(name).Render(context.Background(), f)
-	if err != nil {
+	if err := index(name).Render(context.Background(), f); err != nil {
 		log.Fatalf("failed to write output file: %v", err)
 	}
 }
