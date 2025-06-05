@@ -39,6 +39,7 @@ jobs:
           go run . ${{ github.actor }}
           mkdir -p _site/
           mv -f index.html _site/
+          cp -a assets _site/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
