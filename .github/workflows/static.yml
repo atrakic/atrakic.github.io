@@ -10,7 +10,7 @@ on:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -34,17 +34,16 @@ jobs:
 
       - name: Build static pages
         run: |
-          go get github.com/a-h/templ
+          go install github.com/a-h/templ/cmd/templ@latest
+          templ generate
           go run . ${{ github.actor }}
-
-      # Ugly hack to remove files that are not needed
-      - name: Cleanup
-        run: rm -rf .git .github .gitignore .vscode go.mod go.sum LICENSE README.md *.templ *.go Makefile
+          mkdir -p _site/
+          mv -f index.html _site/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site/
 
   deploy:
     environment:
