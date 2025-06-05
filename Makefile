@@ -22,5 +22,5 @@ test: build
 
 clean:
 	go clean
-	rm -rf index_templ.go index.html
+	rm -rf index.html
 	docker-compose down --remove-orphans -v --rmi local
