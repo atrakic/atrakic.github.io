@@ -1,18 +1,14 @@
-FROM golang:1.23 AS builder
-WORKDIR /src
-COPY go.mod go.sum ./
-RUN go mod download
+ARG GO_IMAGE=golang:1.23
+
+FROM ${GO_IMAGE} AS builder
+WORKDIR /go/src/app
 COPY . .
-RUN go install github.com/a-h/templ/cmd/templ@latest
-RUN templ generate
 RUN go vet -v
 RUN go test -v
-RUN CGO_ENABLED=0 GOOS=linux go build -o /app
+ENV CGO_ENABLED=0 GOOS=linux GOPROXY=direct
+RUN go build -v -o app .
 
-FROM scratch AS generator
-COPY --from=builder /app /app
-RUN ["/app"]
-
-FROM nginx:stable-alpine AS final
-COPY --from=builder /src/assets /usr/share/nginx/html/assets
-COPY --from=generator /index.html /usr/share/nginx/html/index.html
+FROM scratch AS final
+LABEL maintainer="Admir Trakic <atrakic@users.noreply.github.com>"
+COPY --from=builder /go/src/app/app /app
+ENTRYPOINT ["/app"]

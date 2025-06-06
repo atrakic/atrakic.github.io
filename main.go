@@ -36,6 +36,7 @@ func main() {
 	}
 	defer f.Close()
 
+	// Use templ to render the template containing the raw HTML.
 	if err := index(name).Render(context.Background(), f); err != nil {
 		log.Fatalf("failed to write output file: %v", err)
 	}

@@ -1,8 +1,5 @@
 services:
   app:
-    build:
-      context: .
+    build: .
     image: atrakic.github.io
     container_name: app
-    ports:
-      - "8080:80"
