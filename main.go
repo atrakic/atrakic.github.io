@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"log"
 	"os"
 )
@@ -40,4 +41,6 @@ func main() {
 	if err := index(name).Render(context.Background(), f); err != nil {
 		log.Fatalf("failed to write output file: %v", err)
 	}
+
+	fmt.Printf("Index page for (%s) generated", name)
 }

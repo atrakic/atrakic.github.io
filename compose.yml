@@ -3,3 +3,5 @@ services:
     build: .
     image: atrakic.github.io
     container_name: app
+    command: >
+      demo
