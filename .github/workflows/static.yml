@@ -36,7 +36,7 @@ jobs:
         run: |
           go install github.com/a-h/templ/cmd/templ@latest
           templ generate
-          go run . ${{ github.actor }}
+          go run . ${{ github.event.repository.name }}
           mkdir -p _site/
           mv -f index.html _site/
           cp -a assets _site/
