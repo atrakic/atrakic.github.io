@@ -117,7 +117,7 @@ func headerComponent(title string) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 7, "</title><link rel=\"stylesheet\" href=\"assets/css/style.css\"><style>\n\t\t\t.cicd, .security, .kubernetes { font-size: 14px; }\n\t\t\t.http, .docker, .git { font-size: 16px; }\n\t\t\t.javascript, .dotnet, .nodejs, .aws, .azure, .sql, .nosql, .python, { font-size: 18px; }\n\t\t\t.data, .devops, .cloud, .linux { font-size: 20px; }\n\t\t\t.data { transform: rotate(20deg); }\n\t\t\t.http { transform: rotate(-8deg); }\n\t\t\t.cicd { transform: rotate(10deg); }\n\t\t\t.security { transform: rotate(-4deg); }\n\t\t\t.cloud, .dotnet, .azure { transform: rotate(6deg); }\n\t\t</style></head>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 7, "</title><link rel=\"stylesheet\" href=\"css/style.css\"><style>\n\t\t\t.cicd, .security, .kubernetes { font-size: 14px; }\n\t\t\t.http, .docker, .git { font-size: 16px; }\n\t\t\t.javascript, .dotnet, .nodejs, .aws, .azure, .sql, .nosql, .python, { font-size: 18px; }\n\t\t\t.data, .devops, .cloud, .linux { font-size: 20px; }\n\t\t\t.data { transform: rotate(20deg); }\n\t\t\t.http { transform: rotate(-8deg); }\n\t\t\t.cicd { transform: rotate(10deg); }\n\t\t\t.security { transform: rotate(-4deg); }\n\t\t\t.cloud, .dotnet, .azure { transform: rotate(6deg); }\n\t\t</style></head>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

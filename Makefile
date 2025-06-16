@@ -1,16 +1,14 @@
 PACKAGES := $(shell go list ./...)
-name := $(shell basename ${PWD})
+name := app 
 
 MAKEFLAGS += --silent
-
 OPTIONS ?= --no-color --remove-orphans --build --force-recreate
 USER ?= $(shell whoami)
 
-.PHONY: all build docker test clean
+.PHONY: all help init build run docker test clean
 
 all: help
 
-.PHONY: help
 help: Makefile
 	@echo
 	@echo " Choose a make command to run"
@@ -34,20 +32,19 @@ run:
 
 ## docker: build project into a docker container image
 docker:
+	GOOS=linux go build -o $(name)
 	DOCKER_BUILDKIT=1 docker-compose up $(OPTIONS) -d
 
-
 ## vet: vet code
-.PHONY: vet
 vet:
 	go vet $(PACKAGES)
 
 ## test: run unit tests
-test:
-	go vet
+test: vet
 	go test -v .
 
+## clean: clean up
 clean:
 	go clean
-	rm -rf index.html
+	rm -rf index.html $(name)
 	docker-compose down --remove-orphans -v --rmi local
