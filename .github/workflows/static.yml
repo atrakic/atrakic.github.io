@@ -36,6 +36,7 @@ jobs:
         run: |
           go run . ${{ github.event.repository.name }}
           mv -f index.html _site/
+          cp -R assets _site/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
