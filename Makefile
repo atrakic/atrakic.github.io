@@ -1,5 +1,5 @@
 PACKAGES := $(shell go list ./...)
-name := app 
+name := app.bin
 
 MAKEFLAGS += --silent
 OPTIONS ?= --no-color --remove-orphans --build --force-recreate
@@ -32,7 +32,7 @@ run:
 
 ## docker: build project into a docker container image
 docker:
-	GOOS=linux go build -o $(name)
+	CGO_ENABLED=0 GOOS=linux go build -o $(name)
 	DOCKER_BUILDKIT=1 docker-compose up $(OPTIONS) -d
 
 ## vet: vet code
@@ -46,5 +46,5 @@ test: vet
 ## clean: clean up
 clean:
 	go clean
-	rm -rf index.html $(name)
+	rm -f index.html $(name)
 	docker-compose down --remove-orphans -v --rmi local

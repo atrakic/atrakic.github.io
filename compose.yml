@@ -5,13 +5,13 @@ services:
     ports:
       - "8080:80"
     environment:
-      - USER=foo
-    command: /bin/sh -c "/app $${USER} && mv -f index.html /usr/share/nginx/html && nginx -g 'daemon off;'"
+      USER: "john doe"
+    command: /bin/sh -c "/app \"$${USER}\" && mv -f index.html /usr/share/nginx/html && nginx -g 'daemon off;'"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost"]
       interval: 1m
       timeout: 20m
       retries: 20
     volumes:
-      - ./app:/app
-      - ./_site/css:/usr/share/nginx/html/css:ro
+      - ./app.bin:/app:ro
+      - ./assets:/usr/share/nginx/html/assets:ro

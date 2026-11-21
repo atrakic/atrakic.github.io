@@ -1,0 +1,69 @@
+body {
+	background: #000000;
+	margin: 0;
+	padding: 40px 20px;
+	box-sizing: border-box;
+	height: 100vh;
+	font: x-small Arial;
+	text-align: center;
+	color: #999999;
+}
+
+html {
+	height: 100%;
+}
+
+a:link,
+a:visited {
+	color: #999999;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #FFFFFF;
+	background: #000000;
+}
+
+a img {
+	border-width: 0;
+}
+
+.layout {
+	width: 100%;
+	height: 100%;
+	font-size: 16px;
+	text-align: start;
+}
+
+.layout tr:first-child {
+	height: 10%;
+}
+
+.layout tr:nth-child(2) {
+	height: 76.5%;
+}
+
+.layout tr:last-child {
+	height: 13.5%;
+}
+
+.name {
+	margin: 1em 0;
+	font-size: 140%;
+	text-align: right;
+}
+
+.name span {
+	font-size: 48px;
+}
+
+.social-links {
+	font-size: 140%;
+	min-height: 104px;
+}
+
+.about,
+.links {
+	margin-top: 0;
+	font-size: 70%;
+}
